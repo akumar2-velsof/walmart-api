@@ -1,1 +1,1 @@
-# Walmart Partner APIs PHP SDK
+# Walmart
