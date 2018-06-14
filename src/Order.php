@@ -1,7 +1,7 @@
 <?php
 namespace Walmart;
 
-use fillup\A2X;
+use knowband\A2X;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Message\ResponseInterface;
 

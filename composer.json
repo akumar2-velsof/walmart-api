@@ -13,7 +13,7 @@
   "require": {
     "php": ">=5.4",
     "guzzlehttp/guzzle": "^5.3.1",
-    "knowband/guzzle-services": "0.0.*",
+    "knowband/guzzle-services": "^0.0.1",
     "guzzlehttp/retry-subscriber": "^2.0.2",
     "knowband/walmart-auth-signature": "^0.0.1",
     "knowband/array2xml": "^0.0.1"
