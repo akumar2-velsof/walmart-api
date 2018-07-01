@@ -15,7 +15,7 @@
     "guzzlehttp/guzzle": "*",
     "knowband/guzzle-services": "^0.0.2",
     "guzzlehttp/retry-subscriber": "^2.0.2",
-    "knowband/walmart-auth-signature": "^0.0.1",
+    "knowband/walmart-auth-signature": "^0.0.2",
     "knowband/array2xml": "^0.0.1"
   },
   "require-dev": {
