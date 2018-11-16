@@ -23,7 +23,7 @@
     "silinternational/php-env": "^0.2.0"
   },
   "suggest": { 
-    "roave/security-advisories": "Make sure you don't install dependencies with known issues. Install dev-master version."
+    "roave/security-advisories": "Make  sure you don't install dependencies with known issues. Install dev-master version."
   },
   "autoload": {
     "psr-4": {
