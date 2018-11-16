@@ -1,10 +1,10 @@
 <?php
 namespace Walmart\middleware;
 
-use GuzzleHttp\Event\CompleteEvent;
-use GuzzleHttp\Event\RequestEvents;
-use GuzzleHttp\Event\SubscriberInterface;
-use GuzzleHttp\Stream\Stream;
+use GuzzleHttp1\Event\CompleteEvent;
+use GuzzleHttp1\Event\RequestEvents;
+use GuzzleHttp1\Event\SubscriberInterface;
+use GuzzleHttp1\Stream\Stream;
 use Walmart\Utils;
 
 class XmlNamespaceSubscriber implements SubscriberInterface

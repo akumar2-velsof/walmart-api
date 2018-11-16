@@ -2,8 +2,8 @@
 namespace Walmart;
 
 use knowband\A2X;
-use GuzzleHttp\Exception\RequestException;
-use GuzzleHttp\Message\ResponseInterface;
+use GuzzleHttp1\Exception\RequestException;
+use GuzzleHttp1\Message\ResponseInterface;
 
 /**
  * Partial Walmart API client implemented with Guzzle.

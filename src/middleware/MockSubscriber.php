@@ -1,9 +1,9 @@
 <?php
 namespace Walmart\middleware;
 
-use GuzzleHttp\Event\BeforeEvent;
-use GuzzleHttp\Event\RequestEvents;
-use GuzzleHttp\Event\SubscriberInterface;
+use GuzzleHttp1\Event\BeforeEvent;
+use GuzzleHttp1\Event\RequestEvents;
+use GuzzleHttp1\Event\SubscriberInterface;
 use Walmart\mock\MockResponse;
 
 class MockSubscriber implements SubscriberInterface

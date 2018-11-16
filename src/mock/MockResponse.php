@@ -1,9 +1,9 @@
 <?php
 namespace Walmart\mock;
 
-use GuzzleHttp\Message\Request;
-use GuzzleHttp\Message\Response;
-use GuzzleHttp\Stream\Stream;
+use GuzzleHttp1\Message\Request;
+use GuzzleHttp1\Message\Response;
+use GuzzleHttp1\Stream\Stream;
 
 class MockResponse
 {

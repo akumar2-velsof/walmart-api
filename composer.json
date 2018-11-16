@@ -12,8 +12,8 @@
   "minimum-stability": "stable",
   "require": {
     "php": ">=5.4",
-    "guzzlehttp/guzzle": "^6.3.3",
-    "knowband/guzzle-services": "^0.0.2",
+    "knowband/guzzlehttp": "0.0.1",
+    "knowband/guzzle-services": "0.0.3",
     "knowband/walmart-auth-signature": "^0.0.2",
     "knowband/array2xml": "^0.0.1"
   },

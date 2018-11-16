@@ -5,9 +5,9 @@ use Walmart\middleware\AuthSubscriber;
 use Walmart\middleware\MockSubscriber;
 use Walmart\middleware\XmlNamespaceSubscriber;
 
-use GuzzleHttp\Client as HttpClient;
-use GuzzleHttp\Command\Guzzle\GuzzleClient;
-use GuzzleHttp\Command\Guzzle\Description;
+use GuzzleHttp1\Client as HttpClient;
+use GuzzleHttp1\Command\Guzzle\GuzzleClient;
+use GuzzleHttp1\Command\Guzzle\Description;
 
 /**
  * Partial Walmart API client implemented with Guzzle.

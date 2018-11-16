@@ -2,7 +2,7 @@
 namespace Walmart;
 
 use knowband\A2X;
-use GuzzleHttp\Post\PostFile;
+use GuzzleHttp1\Post\PostFile;
 /**
  * Partial Walmart API client implemented with Guzzle.
  *
