@@ -42,21 +42,28 @@ class AuthSubscriber implements SubscriberInterface
 
         $requestMethod = $event->getRequest()->getMethod();
         $timestamp = Utils::getMilliseconds();
-        $signature = Signature::calculateSignature($consumerId, $privateKey, $requestUrl, $requestMethod, $timestamp);
+        $accessToken = Signature::calculateSignature($consumerId, $privateKey, $requestUrl, $requestMethod, $timestamp);
+        $authorization = base64_encode($consumerId . ":" . $privateKey);
 
         /*
          * Add required headers to request
          */
         $headers = [
             'WM_SVC.NAME' => 'Walmart Marketplace',
-            'WM_QOS.CORRELATION_ID' => base64_encode(Random::string(16)),
-            'WM_SEC.TIMESTAMP' => $timestamp,
-            'WM_SEC.AUTH_SIGNATURE' => $signature,
-            'WM_CONSUMER.ID' => $consumerId,
+            'WM_QOS.CORRELATION_ID' => uniqid(),
+            'WM_SEC.ACCESS_TOKEN' => $accessToken,
+            'Authorization' => 'Basic '.$authorization,
+            'Host' => 'marketplace.walmartapis.com',
+            'Content-Type' => 'application/x-www-form-urlencoded',
+            'Accept' =>  'application/xml',
+            'WM_SVC.VERSION' =>  '1.0.0'
         ];
+        
         $currentHeaders = $event->getRequest()->getHeaders();
-        unset($currentHeaders['Authorization']);
         $updatedHeaders = array_merge($currentHeaders, $headers);
+        unset($updatedHeaders['WM_CONSUMER.CHANNEL.TYPE']);
+        unset($updatedHeaders['WM_SEC.TIMESTAMP']);
+        unset($updatedHeaders['User-Agent']);
         $event->getRequest()->setHeaders($updatedHeaders);
     }
 
